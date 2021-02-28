@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import './vars.css';
+
+.header_title {
+    text-transform: uppercase;
+    color: var(--grey-background-active);
+    letter-spacing: 1px;
+    font-size: small;
+    margin-top: 40px;
+}
+
+.form_wrapper .input_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    height: 250px;
+}
+
+.form_wrapper .input_container .input_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.form_wrapper input, select {
+    width: 100%;
+    padding: 15px 32px;
+    margin: 5px;
+    
+    border-radius: 5px;
+    border: 1px solid var(--grey-border);
+    
+    font-size: 14px;
+
+    outline: none;
+    /* appearance: none; */
+}
+
+.form_wrapper input::placeholder, select {
+    color: var(--opaque-black-70);
+}
+
+.form_wrapper option:not(:disabled) {
+    color: black;
+    text-align: center;
+}
+
+.form_wrapper button{
+    background-color: var(--blue-pale);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    border-radius: 5px;
+    margin: 5px 20px 40px 20px;
+    padding: 15px 80px;
+    
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.form_wrapper .error p {
+    width: 100%;
+    display:inline-block;
+    
+    text-align: center;
+    font-size: 14px;
+    color: var(--red-error);
+    font-weight: 400;
+    line-height: 1px;
+  }
+
+.form_wrapper button:hover {
+    background-color: var(--blue-active);
+}
+
+.form_wrapper button:active {
+    transform: scale(0.95);
+}
+
+main .content .table_wrapper table {
+    width: 100%;
+    margin-left: 5px;
+    
+    font-size: 0.9em;
+    font-family: 'Inter', sans-serif;
+    
+    border-collapse: collapse;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+main .content .table_wrapper table thead tr {
+    background-color: var(--blue-pale);
+    color: #ffffff;
+    text-align: left;
+}
+
+main .content .table_wrapper table th, td {
+    padding: 12px 15px;
+}
+
+main .content .table_wrapper table td:last-child {
+    text-align: right;
+}
+
+main .content .table_wrapper table td form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .content .table_wrapper table td form button {
+    cursor: pointer;
+}
+
+main .content .table_wrapper table td form button:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+main .content .table_wrapper table td form .edit {
+    width: 20px;
+    height: 20px;
+    background: url('../assets/edit.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    outline: none;
+}
+
+main .content .table_wrapper table td form .delete {
+    width: 20px;
+    height: 20px;
+    background: url('../assets/delete.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    outline: none;
+}
+
+/* <button type="button" onclick="" style="outline: none; border: none; background: none; padding: 0 0 0 15px;">❌</button> */
+
+main .content .table_wrapper table td form .cancel_user_edit_btn {
+    padding: 0 0 0 15px;
+    
+    outline: none; 
+    border: none; 
+    background: none;
+
+    cursor: pointer;
+}
+
+main .content .table_wrapper table tbody tr {
+    border-bottom: 2px solid #dddddd;
+    border: 1px var(--grey-border) solid;
+    overflow: hidden;
+}
+
+main .content .table_wrapper table tbody tr:nth-of-type(even) {
+    background-color: var(--opaque-black-10);
+}
+
+main .content .table_wrapper table tbody tr:hover {
+    background-color: var(--opaque-black-20);
+}
+
+@media screen and (max-width: 850px){
+    .form_wrapper .input_container {
+        height: auto;
+    }
+
+    .form_wrapper form {
+        justify-content: center;
+    }
+
+    .outer {
+        overflow-x: scroll;
+    }
+}

@@ -1,0 +1,23 @@
+main .login_promt {
+    border: 1px var(--grey-border) solid;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+main .login_promt p {
+    margin: 10px 0;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+main .login_promt p a {
+    font-size: 14px;
+    color: var(--blue-pale);
+    display:inline-block;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    font-weight: 400;
+}

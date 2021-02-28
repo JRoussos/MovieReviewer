@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import './vars.css';
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.sidenav {
+    width: 100%;
+    flex: 1 2 150px;
+}
+
+.sidenav .sidebar_wrapper {
+    padding-left: 80px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    max-width: 300px;
+
+    position: sticky;
+    top: -70px;
+}
+
+.sidenav .profile {
+    border-radius: 4px;
+    background-color: #cecece;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidenav .profile > div {
+    padding: 35% 3vw;
+}
+
+.sidenav .profile svg {
+    height: 150px;
+}
+
+.sidenav .user_info {
+    /* width: 100%; */
+    text-align: left;
+
+    margin-top: 15px;
+    
+    font-weight: 500;
+    
+    border-radius: 4px;
+    border: 1px var(--grey-border) solid;
+}
+
+.sidenav .user_info p{
+    padding: 0 10px;
+}
+
+.sidenav .user_info .notification-container {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: 5px;
+    padding-left: 10px;
+}
+
+.sidenav .user_info .notification-container .icon-heart {
+    height: 20px;
+    content: url(../assets/heart.svg);
+}
+
+.sidenav .user_info .notification-container .icon-review {
+    height: 20px;
+    content: url(../assets/review.svg);
+}
+    
+.sidenav .user_info .notification-counter {   
+    position: absolute;
+    top: -2px;
+    left: 23px;    
+    background-color:var(--red-active);
+    color: #fff;
+    border-radius: 3px;
+    padding: 1px 3px;
+    font: 8px Verdana;
+}
+
+.sidenav .user_info #username{
+    text-transform: capitalize;
+}
+
+.sidenav .user_info #admin_header{
+    background-color: var(--grey-background-active);
+    color: white;
+    margin: 0;
+    padding: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.sidenav .user_options {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 15px;
+
+    border-radius: 4px;
+    border: 1px var(--grey-border) solid;
+}
+
+.sidenav .user_options button {
+    text-align: left;
+    line-height: 2em;
+
+    padding: 10px;
+
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    background: none;
+
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+.sidenav .user_options button:hover {
+    background-color: var(--grey-background-pale);
+}
+
+main .content .content_wrapper{
+    position: relative;
+    padding: 80px 40px;
+    width: 80%;
+}
+
+main .content {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+main .content .search_bar {
+    width: 100%;
+    height: 50px;
+
+    overflow: hidden;
+
+    border: 1px var(--grey-border) solid;
+    border-radius: 4px;
+    position: relative;
+
+    margin-bottom: 10px;
+}
+
+main .content .flex {
+    display: flex;
+    flex-direction: row;
+}
+
+main .content .flex button {
+    display: none;
+    margin-bottom: 10px;
+    background: none;
+    outline: none;
+
+    border: 1px var(--grey-border) solid;
+    border-radius: 4px;
+
+    padding: 0 20px;
+    margin-left: 5px;
+    position: relative;
+
+    cursor: pointer;
+}
+
+main .content .flex button div{
+    border-bottom: 2px solid rgb(148, 148, 148);
+    margin-top: 4px;
+    width: 30px;
+    border-radius: 8px;
+}
+
+main .content .search_bar #clear {
+    visibility: hidden;
+    content: url(../assets/cancel.svg);
+    height: 25px;
+    margin-top: 14px;
+    margin-left: 10px;
+
+    position: absolute;
+
+    cursor: pointer;
+}
+
+main .content .search_bar input {
+    border: none;
+    width: -webkit-fill-available;
+    height: 100%;
+    margin: 0 40px ;
+    font-size: 15px;
+}
+
+main .content .search_bar input:focus {
+    outline: none;
+}
+
+main .content .search_bar input::placeholder {
+    text-align: center;
+}
+
+main .content #search_results {
+    width: 100%;
+
+    border: 1px var(--grey-border) solid;
+    border-radius: 4px;
+    position: absolute;
+    display: none;
+
+    background-color: white;
+    z-index: 2;
+}
+
+main .content #search_results div {
+    padding: 1em;
+    cursor: pointer;
+}
+
+main .content #search_results p {
+    margin: 0;
+}
+
+main .content #search_results div:hover {
+    background-color: var(--grey-background-pale);
+}
+
+main .content .home .review {
+    padding-top: 30px;
+}
+
+main .content .home .review p {
+    margin: 20x 0;
+}
+
+main .content .home .review p span {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+main .content .home .review_content {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px var(--grey-border) solid;
+    /* background:  var(--opaque-black-10); */
+}
+
+main .content .home .review_content p {
+    font-style: italic;
+}
+
+main .content .home .movie_poster {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+
+    border-radius: 8px;
+    background-color: var(--grey-background-pale);
+    overflow: hidden;
+
+    padding: 1px;
+}
+
+main .content .home .movie_poster img {
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    filter: blur(2px);
+}
+
+main .content .user_movie_list {
+    width: 100%;
+    padding: 30px 0;
+    position: relative;
+}
+
+.border {
+    border-radius: 6px;
+    border: 1px var(--grey-border) solid;
+    padding: 20px;
+}
+
+#info_text {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    opacity: 0.8;
+    margin-top: 15vh;
+}
+
+main .content .user_movie_list .movie {
+    position: relative;
+}
+
+.backdrop {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--opaque-black-20);
+}
+
+.cancel_btn {
+    width: 30px;
+    height: 30px;
+    background: url('../assets/cancel.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+main .content .user_movie_list .movie .textarea_wrapper {
+    padding: 10px;
+    margin: 2px 0 4px 2px;
+    border: 1px var(--grey-border-alt) solid;
+    border-radius: 4px;
+
+    position: relative;
+    z-index: 1;
+    background: white;
+    box-shadow: 0 0 20px 0 var(--opaque-black-10);
+}
+
+main .content .user_movie_list .movie textarea {
+    margin: 0;
+    padding: 0;
+    resize: none;
+    outline: none;
+    border: none;
+
+    width: 100%;
+    height: 80px;
+
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+main .content .user_movie_list .movie .btn_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+main .content .user_movie_list .movie .btn_wrapper button {
+    width: 100%;
+    margin: 2px;
+    padding: 5px;
+
+    border-radius: 6px;
+    border: 1px var(--grey-border) solid;
+    background: none;
+    outline: none;
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+
+    transition: background-color 0.1s ease-in-out;
+}
+
+main .content .user_movie_list .movie .btn_wrapper .edit, .delete {
+    position: relative;
+    background: var(--blue-pale);
+    color: white;
+    box-shadow: 0 0 20px 0 var(--opaque-black-10);
+}
+
+main .content .user_movie_list .movie .btn_wrapper .edit:hover {
+    background-color: var(--blue-active);
+    color: white;
+}
+
+main .content .user_movie_list .movie .btn_wrapper .delete {
+    width: 40px;
+    height: 40px;
+    background: url('../assets/delete.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main .content .user_movie_list .movie .btn_wrapper .delete:hover {
+    background: url('../assets/delete_white.svg');
+    background-color: var(--red-active-alt);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main .content .user_movie_list .movie_poster {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+
+    border-radius: 8px;
+    background-color: var(--grey-background-pale);
+    overflow: hidden;
+
+    padding: 1px;
+}
+
+.small_poster {
+    height: 130px;
+    width: 100px;
+}
+
+.large_poster {
+    height: 200px;
+    width: 150px;
+}
+
+main .content .user_movie_list .movie_poster img {
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+main .content .user_movie_list .movie_info form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main .content .user_movie_list .movie_info h4,a {
+    margin-top: 2px;
+    margin-bottom: 6px;
+
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+main .content .user_movie_list #movie_reviews .review {
+    padding-top: 30px;
+    border-radius: 6px;
+    border: 1px var(--grey-border) solid;
+
+    margin: 20px 0;
+    padding: 10px;
+}
+
+main .content .user_movie_list #movie_reviews p {
+    padding: 0 30px;
+}
+
+main .content .user_movie_list .post_review {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    height: 50px;
+    width: 100%;
+}
+
+main .content .user_movie_list .post_review input {
+    outline: none;
+    padding-left: 10px;
+
+    line-height: 2em;
+    width: 100%;
+
+    border-radius: 4px;
+    border: 1px var(--grey-border) solid;
+
+    font-family: 'Inter', sans-serif;
+}
+
+main .content .user_movie_list .post_review #post_review_btn {
+    background: var(--blue);
+
+    border: 1px var(--grey-border) solid;
+    border: none;
+    border-radius: 4px;
+
+    padding: 0 20px;
+    margin-left: 5px;
+    position: relative;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    color: #fefefe;
+
+    transition: background 0.15s ease-in-out;
+}
+
+main .content .user_movie_list .post_review #post_review_btn:disabled {
+    background: var(--blue-pale);
+}
+
+.short_plot {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+main .content .user_movie_list .plot_btn {
+    margin-top: 45px;
+    padding: 5px 0;
+
+    width: 100%;
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+
+    cursor: pointer;
+}
+
+main .content .user_movie_list .movie_info .small_info {
+    font-weight: 500;
+    margin: 2px;
+}
+
+main .content .user_movie_list .movie_info button {
+    border: none;
+
+    width: 22px;
+    height: 20px;
+
+    margin-left: 8px;
+    margin-top: 2px;
+    padding: 4px 0;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: background 0.15s ease-in-out;
+}
+
+main .content .user_movie_list .movie_info button:not(.is_on_watchlist) {
+    background: url(../assets/heart.svg);
+    background-repeat: no-repeat;
+}
+
+.is_on_watchlist {
+    background: url(../assets/heart_full.svg);
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 850px){
+    main .content .flex button {
+        display: block;
+    }
+
+    .sidenav {
+        background-color: white;
+        position: fixed;
+        height: 100%;
+        width: 200px;
+        left: -250px;
+        z-index: 10;
+        padding: 20px;
+        box-shadow: 4px 4px 8px var(--opaque-black-50);
+
+        overflow-y: scroll;
+    }
+
+    .sidenav::-webkit-scrollbar {
+        display: none;
+        scrollbar-width: none; 
+    }
+
+    .sidenav .sidebar_wrapper {
+        padding: 0;
+        padding-bottom: 5vh;
+        position: relative;
+        top: 0;
+    }
+}
