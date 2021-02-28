@@ -33,10 +33,11 @@ The idea for this site was that it would be a service for writting reviews on mo
 
 #### TECHNOLOGIES USED
 
-> [OMDb API](http://www.omdbapi.com/) </br>
-> [Lodash](https://lodash.com/) </br>
 > [PHP](https://www.php.net/index.php) </br>
 > [MySQL](https://www.mysql.com/) </br>
+> [Lodash](https://lodash.com/) </br>
+
+> [OMDb API](http://www.omdbapi.com/) </br>
 
 </br>
 
